@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/marvelous_praent/marcelous_common/marcelous_common.iml" filepath="$PROJECT_DIR$/marvelous_praent/marcelous_common/marcelous_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/marvelous.iml" filepath="$PROJECT_DIR$/.idea/marvelous.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marvelous_praent/marvelous_commondb/marvelous_commondb.iml" filepath="$PROJECT_DIR$/marvelous_praent/marvelous_commondb/marvelous_commondb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marvelous_praent/marvelous_eureka/marvelous_eureka.iml" filepath="$PROJECT_DIR$/marvelous_praent/marvelous_eureka/marvelous_eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marvelous_praent/marvelous_gateway/marvelous_gateway.iml" filepath="$PROJECT_DIR$/marvelous_praent/marvelous_gateway/marvelous_gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marvelous_praent/marvelous_praent.iml" filepath="$PROJECT_DIR$/marvelous_praent/marvelous_praent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marvelous_praent/marvelous_service/marvelous_service.iml" filepath="$PROJECT_DIR$/marvelous_praent/marvelous_service/marvelous_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marvelous_praent/marvelous_service_api/marvelous_service_api.iml" filepath="$PROJECT_DIR$/marvelous_praent/marvelous_service_api/marvelous_service_api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/marvelous_praent/marvelous_web/marvelous_web.iml" filepath="$PROJECT_DIR$/marvelous_praent/marvelous_web/marvelous_web.iml" />
+    </modules>
+  </component>
+</project>

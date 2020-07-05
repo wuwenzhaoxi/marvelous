@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+<!--父工程都是pom包-->
+    <groupId>com.rsyj</groupId>
+    <artifactId>marvelous</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>marvelous_gateway</module>
+        <module>marvelous_service</module>
+        <module>marvelous_service_api</module>
+        <module>marvelous_web</module>
+        <module>marvelous_eureka</module>
+        <module>marcelous_common</module>
+        <module>marvelous_commondb</module>
+    </modules>
+
+    <!--  它用来提供相关的Maven默认依赖。使用它之后，常用的包依赖可以省去version标签。-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.1.RELEASE</version>
+    </parent>
+
+    <properties>
+        <!--        二者的根本区别在于<skipTests>true</skipTests>会编译测试类，而<maven.test.skip>true</maven.test.skip>不会编译测试类。-->
+        <skipTests>true</skipTests>
+        <!--        <maven.test.skip>true</maven.test.skip>-->
+    </properties>
+    <!--    dependencies即使在子项目中不写该依赖项，那么子项目仍然会从父项目中继承该依赖项（全部继承）-->
+    <dependencies>
+    <!--     springboot 测试包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--        操作json-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.72</version>
+        </dependency>
+<!--        swagger-文档-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.10.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.10.5</version>
+        </dependency>
+    </dependencies>
+
+    <!--    dependencyManagement里只是声明依赖，并不实现引入，-->
+    <!--    因此子项目需要显示的声明需要用的依赖。如果不在子项目中声明依赖，-->
+    <!--    是不会从父项目中继承下来的；-->
+    <!--    只有在子项目中写了该依赖项，并且没有指定具体版本，-->
+    <!--    才会从父项目中继承该项，并且version和scope都读取自父pom;-->
+    <!--    另外如果子项目中指定了版本号，那么会使用子项目中指定的jar版本。-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR6</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
